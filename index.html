@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RASHEDUL KARIM | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="networkCanvas"></canvas>
+
+    <header>
+        <nav>
+            <img src="logo.png" alt="RK Logo" class="site-logo">
+            <div class="nav-actions">
+                <ul class="nav-menu">
+                    <li onclick="scrollToSection('home')">হোম</li>
+                    <li onclick="scrollToSection('about')">সম্পর্কে</li>
+                </ul>
+                <div class="islamic-btn" onclick="openPrayer()"><i class="fas fa-mosque"></i></div>
+                <div id="lang-switcher" class="modern-lang-box"><i class="fas fa-language"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <h4 id="h-hello">আসসালামু আলাইকুম</h4>
+            <h1 class="h-name">I'm <span id="h-myname">RASHEDUL KARIM</span></h1>
+            <div class="dev-box"><span id="h-job">সফটওয়্যার ডেভেলপার</span></div>
+            
+            <div class="social-grid">
+                <a href="https://wa.me/8801871176267" target="_blank" class="s-icon wa"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://fb.com/share/1Kr3u1En9J/" target="_blank" class="s-icon fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/rasedulkarim.00" target="_blank" class="s-icon ig"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:rasedulkarim@email.com" class="s-icon ml"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="glow-frame">
+                <img src="assets/profile.jpg" alt="Profile">
+            </div>
+        </div>
+    </section>
+
+    <section class="tribute-section">
+        <h2 id="tribute-head" class="tribute-title">হাদী ভাই তোমায় মনে পড়ে</h2>
+        <div class="banner-wrapper">
+            <img src="assets/hadi.jpg" alt="Hadi Bhai" class="hadi-banner">
+        </div>
+    </section>
+
+    <section class="about-wrap" id="about">
+        <div class="about-card">
+            <h2 id="a-header">আমার সম্পর্কে</h2>
+            <p id="a-text" class="text-clamped"></p>
+            <button id="a-btn" onclick="toggleText()">আরো পড়ুন...</button>
+        </div>
+    </section>
+
+    <div id="prayer-modal" class="modal" onclick="closePrayerOutside(event)">
+        <div class="modal-box">
+            <h3 id="p-title">নামাজের সময়সূচি</h3>
+            <div id="p-times"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+:root {
+    --gold: #ffcc00;
+    --orange: #ff5e3a;
+    --bg-black: #05070a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { background: var(--bg-black); color: #fff; font-family: 'Hind Siliguri', sans-serif; overflow-x: hidden; padding: 0 5%; }
+
+#networkCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+
+header { position: sticky; top: 0; z-index: 1000; background: rgba(5, 7, 10, 0.5); backdrop-filter: blur(10px); padding: 10px 0; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.site-logo { height: 70px; filter: drop-shadow(0 0 5px var(--orange)); }
+
+.nav-actions { display: flex; align-items: center; gap: 15px; }
+.nav-menu { display: flex; list-style: none; gap: 15px; cursor: pointer; font-weight: bold; }
+.islamic-btn { color: var(--gold); font-size: 24px; cursor: pointer; }
+.modern-lang-box { font-size: 20px; cursor: pointer; color: var(--gold); border: 1px solid var(--gold); padding: 5px 8px; border-radius: 5px; }
+
+.hero { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; min-height: 80vh; }
+.h-name { font-size: clamp(30px, 6vw, 60px); font-weight: 900; }
+.h-name span { color: var(--orange); }
+.dev-box { margin: 15px 0; color: var(--gold); font-weight: bold; font-size: 20px; }
+
+.hero-right { width: 280px; height: 280px; margin: 20px auto; }
+.glow-frame { width: 100%; height: 100%; border-radius: 50%; border: 3px solid var(--gold); overflow: hidden; box-shadow: 0 0 20px rgba(255, 204, 0, 0.3); }
+.glow-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.social-grid { display: flex; gap: 15px; margin-top: 20px; }
+.s-icon { width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
+.wa:hover { background: #25D366; box-shadow: 0 0 15px #25D366; }
+.fb:hover { background: #1877F2; box-shadow: 0 0 15px #1877F2; }
+.ig:hover { background: #dc2743; box-shadow: 0 0 15px #dc2743; }
+.ml:hover { background: #EA4335; box-shadow: 0 0 15px #EA4335; }
+
+.tribute-section { margin: 50px 0; text-align: center; }
+.tribute-title { color: var(--gold); font-size: clamp(24px, 4vw, 38px); margin-bottom: 20px; }
+.banner-wrapper { width: 100%; border: 2px solid var(--gold); border-radius: 10px; overflow: hidden; }
+.hadi-banner { width: 100%; height: auto; display: block; }
+
+.about-card { background: rgba(255, 255, 255, 0.05); padding: 30px; border-radius: 20px; border-left: 5px solid var(--gold); margin: 40px 0; }
+.text-clamped { max-height: 150px; overflow: hidden; line-height: 1.8; font-size: 18px; transition: max-height 0.5s ease; white-space: pre-line; }
+.expanded { max-height: 2000px !important; }
+#a-btn { background: var(--gold); border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; margin-top: 15px; font-weight: bold; }
+
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; }
+.modal-box { background: #111; width: 90%; max-width: 320px; margin: 100px auto; padding: 30px; border: 1px solid var(--gold); border-radius: 15px; text-align: center; }
+
+@media (max-width: 768px) { .hero { flex-direction: column-reverse; text-align: center; } .social-grid { justify-content: center; } }
